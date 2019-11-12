@@ -1,0 +1,41 @@
+
+{% if edu %}
+
+<table align="center" border="2">
+    <tr>
+        <h4 align="center">Xth Details</h4>
+        <th>
+            <th>ID_NO</th>
+            <th>Start_Date</th>
+            <th>Completion_Date</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Education_Institution</th>
+            <th>PERCENTAGE</th>
+            <th>Maths_PERCENTAGE</th>
+            <th>Board_or_University</th>
+            <th>Cousre_Type</th>
+        </th>
+    </tr>
+    {% for x in edu.edu_xth_details_employee %}
+     <tr>
+    <th>
+            <th>{{x.ID_NO}}</th>
+            <th>{{ x.Start_Date}}</th>
+            <th>{{x.Completion_Date}}</th>
+            <th>{{x.Country}}</th>
+            <th>{{x.State}}</th>
+            <th>{{x.City}}</th>
+            <th>{{x.Education_Institution}}</th>
+            <th>{{x.PERCENTAGE}}</th>
+            <th>{{x.Maths_PERCENTAGE}}</th>
+            <th>{{x.Board_or_University}}</th>
+            <th>{{x.Cousre_Type}}</th>
+     </th>
+     </tr>
+    {% endfor %}
+</table>
+
+
+{% endif %}

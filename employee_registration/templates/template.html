@@ -1,0 +1,33 @@
+
+
+
+
+
+<html >
+<body>
+{% block head %}
+<form method="get">
+    <input type="search" placeholder="employee name">
+    <button type="submit">Search</button>
+  </form>
+  <table>
+  {% for x in data %}
+  <tr>
+    <td>
+      {{ x.ID_NO }}
+    </td>
+    <td>
+      {{ x.FIRST_NAME }}
+    </td>
+    <td>
+      {{ x.LAST_NAME }}
+    </td>
+    <td>
+      {{ field.status }}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+</body>
+</html>

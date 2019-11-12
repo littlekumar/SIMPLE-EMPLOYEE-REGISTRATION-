@@ -1,0 +1,135 @@
+{% include 'employee_myprofile_headbuttons.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Registration</title>
+</head>
+<body style="background: darkkhaki">
+<br><br>
+
+
+
+
+    <form action="{% url 'store_user' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <h1 style="color: brown" align="center">Personal Information </h1>
+
+        <table align="center">
+         <tr style="width: 500cm
+    ">
+        <th >
+             <div class="placeholder" aria-hidden="true">First Name</div>
+            <label>
+                <input type="text" name="first_name" placeholder="First Name" required>
+            </label>
+
+            <div class="placeholder" aria-hidden="true">Last Name</div>
+            <label>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+            </label>
+
+
+            <div class="placeholder" aria-hidden="true">Date Of Birth</div>
+            <label>
+                <input type="date" name="birthday" placeholder="Date Of Birt" required>
+            </label>
+
+
+                            <div>
+                                            <div>
+                                                <div class="placeholder" aria-hidden="true">Email-Id</div>
+                                                <input type="text" class="inputtext _58mg _5dba _2ph-" data-type="text" name="email" value="" aria-required="true" placeholder="" aria-label="Mobile number or email address" id="u_0_q">
+                                            </div>
+
+
+                                        <div>
+                                            <div class="placeholder" aria-hidden="true">New password</div>
+                                            <input type="password" class="inputtext _58mg _5dba _2ph-" data-type="password" autocomplete="new-password" name="password" aria-required="true" placeholder="" aria-label="New password" id="u_0_x">
+                                        </div><br>
+                            <div>
+                                            <input type="file" name="image"  placeholder="required" >
+                                        </div>
+
+                                        <div class="mbm _br- _a4y hidden_elem" id="u_0_u">
+                                                    <div class="uiStickyPlaceholderInput uiStickyPlaceholderEmptyInput">
+                                                        <div class="placeholder" aria-hidden="true">Mobile number</div>
+                                                        <input type="text" class="inputtext _58mg _5dba _2ph-" data-type="text" name="phone" value="" placeholder="" aria-label="Mobile number" id="u_0_v">
+                                                    </div>
+                                                </div>
+                        </div>
+
+    </th>
+     </tr>
+
+            </table>
+<!----- Gender ----------------------------------------------------------->
+
+       <table align="center" >
+
+                    <tr>
+            <th>GENDER</th>
+            <th>
+            Male <input type="radio" name="Gender" value="Male" />
+            Female <input type="radio" name="Gender" value="Female" />
+            </th>
+            </tr>
+
+            <!----- Address ---------------------------------------------------------->
+            <tr>
+            <th>ADDRESS <br /><br /><br /></th>
+            <th><textarea name="Address" rows="4" cols="30"></textarea></th>
+            </tr>
+
+            <!----- City ---------------------------------------------------------->
+            <tr>
+            <th>CITY</th>
+            <th><input type="text" name="City" maxlength="30" />
+            (max 30 characters a-z and A-Z)
+            </th>
+            </tr>
+
+            <!----- Pin Code ---------------------------------------------------------->
+            <tr>
+            <th>PIN CODE</th>
+            <th><input type="text" name="Pin_Code" maxlength="6" />
+            (6 digit number)
+            </th>
+            </tr>
+
+            <!----- State ---------------------------------------------------------->
+            <tr>
+            <th>STATE</th>
+            <th><input type="text" name="State" maxlength="30" />
+            (max 30 characters a-z and A-Z)
+            </th>
+            </tr>
+
+            <!----- Country ---------------------------------------------------------->
+            <tr>
+            <th>COUNTRY</th>
+            <th><input type="text" name="Country" value="India" readonly="readonly" /></th>
+            </tr>
+
+           <tr>
+            <th>COUNTRY</th>
+            <th><input type="text" name="Country" value="India" readonly="readonly" /></th>
+            </tr>
+
+    </table>
+<table align="center">
+        <tr>
+        <th style="text-align: center">
+            <br>
+            <button type="submit">Submit</button>
+        </th>
+        </tr>
+
+</table>
+        </form>
+
+
+</body>
+</html>

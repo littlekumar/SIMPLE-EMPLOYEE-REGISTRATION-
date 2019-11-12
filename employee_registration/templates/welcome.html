@@ -1,0 +1,19 @@
+{% include 'head.html' %}
+{% include 'head_buttons.html' %}
+
+<html>
+<body>
+<table>
+    <tr>
+        <th>
+            <h1>Welcome</h1>
+            {{ email }}
+        </th>
+        {% if message %}
+            {{ message }}
+        {% endif %}
+    </tr>
+</table>
+
+</body>
+</html>

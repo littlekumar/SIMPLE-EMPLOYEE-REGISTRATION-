@@ -1,0 +1,305 @@
+{% load staticfiles %}
+
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lucky Software Solutions</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Price Slider Stylesheets -->
+    <link href="{% static 'css/nouislider.css' %}" rel="stylesheet">
+    <!-- Google fonts - Playfair Display-->
+    <link href="{% static 'css/css1.css' %}" rel="stylesheet">
+    <!-- Google fonts - Poppins-->
+    <link href="{% static 'css/css2.css' %}" rel="stylesheet">
+    <!-- swiper-->
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet">
+    <!-- Magnigic Popup-->
+    <link href="{% static 'css/magnigic.css' %}" rel="stylesheet">
+    <!-- theme stylesheet-->
+    <link id="theme-stylesheet" href="{% static 'css/theme_style.css' %}" rel="stylesheet">
+
+    <!-- Favicon-->
+    <link href="{% static 'images/favicon.png' %}" rel="shortcut icon">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="{% static 'js/htmlrshiv.js' %}"></script>
+        <script src="{% static 'js/redpond.js' %}"></script><![endif]-->
+    <!-- Font Awesome CSS-->
+    <link href="{% static 'css/awesome.css' %}" rel="stylesheet" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body style="padding-top: 72px;"><div class="d-none">
+    <symbol id="angle-right-1" viewBox="0 0 64 64">
+    <title>Angle Right</title>
+    <desc>A line styled icon from Orion Icon Library.</desc>
+    <path style="stroke:var(--layer1, #202020)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M 26 20.006 L 40 32 L 26 44.006" data-name="layer1" />
+  </symbol>
+  </div>
+    <header class="header">
+      <!-- Navbar-->
+      <nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center"><a class="navbar-brand py-1" href=""><img alt="Directory logo" src="{% static 'images/love_logo.jpg' %}" height="100" width="100"></a>
+            <form class="form-inline d-none d-sm-flex" id="search" action="#">
+              <div class="input-label-absolute input-label-absolute-left input-reset input-expand ml-lg-2 ml-xl-3">
+                <label class="label-absolute" for="search_search"><i class="fa fa-search"></i><span class="sr-only">What are you looking for?</span></label>
+                <input class="form-control form-control-sm border-0 shadow-0 bg-gray-200" id="search_search" aria-label="Search" placeholder="Search">
+                <button class="btn btn-reset btn-sm" type="reset"><i class="fa-times fas"></i></button>
+              </div>
+            </form>
+          </div>
+          <button class="navbar-toggler navbar-toggler-right" aria-expanded="false" aria-controls="navbarCollapse" aria-label="Toggle navigation" type="button" data-target="#navbarCollapse" data-toggle="collapse"><i class="fa fa-bars"></i></button>
+          <!-- Navbar Collapse -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <form class="form-inline mt-4 mb-2 d-sm-none" id="searchcollapsed" action="#">
+              <div class="input-label-absolute input-label-absolute-left input-reset w-100">
+                <label class="label-absolute" for="searchcollapsed_search"><i class="fa fa-search"></i><span class="sr-only">What are you looking for?</span></label>
+                <input class="form-control form-control-sm border-0 shadow-0 bg-gray-200" id="searchcollapsed_search" aria-label="Search" placeholder="Search">
+                <button class="btn btn-reset btn-sm" type="reset"><i class="fa-times fas">           </i></button>
+              </div>
+            </form>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" id="homeDropdownMenuLink" aria-expanded="false" aria-haspopup="true" href="{% url 'home' %}" data-toggle="dropdown">
+
+                  Home</a>
+
+              <!-- Megamenu-->
+              <li class="nav-item dropdown position-static"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Menu</a>
+                <div class="dropdown-menu megamenu py-lg-0">
+                  <div class="row">
+                    <div class="col-lg-9">
+                      <div class="row p-3 pr-lg-0 pl-lg-5 pt-lg-5">
+                        <div class="col-lg-3">
+                          <!-- Megamenu list-->
+                          <h6 class="text-uppercase">Employee</h6>
+                          <ul class="megamenu-list list-unstyled">
+                            <li class="megamenu-list-item"><a class="megamenu-list-link" href="{% url 'personal_information' %}">Personal Details   </a></li>
+                            <li class="megamenu-list-item"><a class="megamenu-list-link" href="{% url 'employee_edu' %}">Educational Details   </a></li>
+                            <li class="megamenu-list-item"><a class="megamenu-list-link" href="{% url 'work_experience' %}">Experience   </a></li>
+                          </ul>
+                        </div>
+                          <!-- Megamenu list-->
+                         <div class="col-lg-3">
+                          <!-- Megamenu list-->
+                          <h6 class="text-uppercase">Contact Us</h6>
+                          <ul class="megamenu-list list-unstyled">
+                            <li class="megamenu-list-item"><a class="megamenu-list-link" href="contact.html">Contact   </a></li>
+                            <li class="megamenu-list-item"><a class="megamenu-list-link" href="pricing.html">E-Mail   </a></li>
+                            <li class="megamenu-list-item"><a class="megamenu-list-link" href="text.html">FaceBook   </a></li>
+                          </ul>
+                        </div>
+                        <div class="col-lg-3">
+                          <!-- Megamenu list-->
+                                 <!-- Megamenu list-->
+                          </div>
+                      </div>
+                      <div class="row megamenu-services d-none d-lg-flex pl-lg-5">
+                        <div class="col-xl-3 col-lg-6 d-flex">
+                          <div class="megamenu-services-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon megamenu-services-icon">
+                              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#customer-support-1"> </use>
+                            </svg>
+                            <div>
+                              <h6 class="text-uppercase">+91 8074022136</h6>
+                              <p class="mb-0 text-muted text-sm">24/7 Available Support</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 d-none d-lg-block"><img class="bg-image" alt="" src="{% static 'images/nani.jpeg' %}"></div>
+                  </div>
+                </div>
+              </li>
+              <!-- /Megamenu end-->
+              <li class="nav-item"><a class="nav-link" href="{% url 'manager_login' %}">Sign in</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- /Navbar -->
+    </header>
+    <section class="hero-home">
+      <div class="swiper-container hero-slider swiper-container-fade swiper-container-horizontal swiper-container-wp8-horizontal">
+        <div class="swiper-wrapper dark-overlay" style="transition-duration: 0.1ms;">
+          <div class="swiper-slide swiper-slide-prev" style='width: 746px; background-image: url("{% static 'images/siri.jpg' %}"); opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;'></div>
+          <div class="swiper-slide swiper-slide-active" style='width: 746px; background-image: url("{% static 'images/employee2.jpg' %}"); opacity: 1; transform: translate3d(-746px, 0px, 0px); transition-duration: 0ms;'></div>
+          <div class="swiper-slide swiper-slide-next" style='width: 746px; background-image: url("{% static 'images/images/sravani.jpg' %}"); opacity: 0; transform: translate3d(-1492px, 0px, 0px); transition-duration: 0ms;'></div>
+          <div class="swiper-slide" style='width: 746px; background-image: url("{% static 'images/nani.jpeg' %}"); opacity: 0; transform: translate3d(-2238px, 0px, 0px); transition-duration: 0ms;'></div>
+        </div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      <div class="container py-6 py-md-7 text-white z-index-20">
+        <div class="row">
+          <div class="col-xl-10">
+            <div class="text-center text-lg-left">
+{#              <p class="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">This is A LuckyLusan</p>#}
+{#              <h1 class="display-3 font-weight-bold text-shadow">Stay like a local</h1>#}
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="container py-6 py-md-7 text-white z-index-20">
+        <div class="row">
+          <div class="col-xl-10">
+            <div class="text-center text-lg-left">
+              <p class="subtitle letter-spacing-4 mb-2 text-secondary text-shadow">This is </p>
+              <h1 class="display-3 font-weight-bold text-shadow">Manis Infotech</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="py-6 bg-gray-100">
+      <div class="container">
+        <div class="text-center pb-lg-4">
+          <p class="subtitle text-secondary">Fully App Based Company</p>
+          <h2 class="mb-5">Friendly Working Climate</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mb-3 mb-lg-0 text-center">
+            <div class="px-0 px-lg-3">
+              <div class="icon-rounded bg-primary-light mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon text-primary w-2rem h-2rem">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#destination-map-1"> </use>
+                </svg>
+              </div>
+              <h3 class="h5">Attractive Package</h3>
+              <p class="text-muted">Depend upon your performance in our company, the package will be increases </p>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3 mb-lg-0 text-center">
+            <div class="px-0 px-lg-3">
+              <div class="icon-rounded bg-primary-light mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon text-primary w-2rem h-2rem">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pay-by-card-1"> </use>
+                </svg>
+              </div>
+              <h3 class="h5">Work with Confidence</h3>
+              <p class="text-muted">We need a active and talented fullstack dekvelopers, so be cconfidence---------</p>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3 mb-lg-0 text-center">
+            <div class="px-0 px-lg-3">
+              <div class="icon-rounded bg-primary-light mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon text-primary w-2rem h-2rem">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#heart-1"> </use>
+                </svg>
+              </div>
+              <h3 class="h5">Enjoy your Profession</h3>
+              <p class="text-muted">work from home also available in my company, we need only submition of the project in time </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section>
+          <div><div>
+          <!-- If we need pagination-->
+          <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-bullets-dynamic" style="width: 80px;"><span tabindex="0" class="swiper-pagination-bullet swiper-pagination-bullet-active swiper-pagination-bullet-active-main" role="button" style="left: 32px;" aria-label="Go to slide 1"></span><span tabindex="0" class="swiper-pagination-bullet swiper-pagination-bullet-active-next" role="button" style="left: 32px;" aria-label="Go to slide 2"></span><span tabindex="0" class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next" role="button" style="left: 32px;" aria-label="Go to slide 3"></span><span tabindex="0" class="swiper-pagination-bullet" role="button" style="left: 32px;" aria-label="Go to slide 4"></span><span tabindex="0" class="swiper-pagination-bullet" role="button" style="left: 32px;" aria-label="Go to slide 5"></span><span tabindex="0" class="swiper-pagination-bullet" role="button" style="left: 32px;" aria-label="Go to slide 6"></span></div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      </div>
+    </section>
+    <!-- Divider Section-->
+    <section class="py-7 position-relative dark-overlay"><img class="bg-image" alt="" src="{% static 'images/home_sea_with_land_pic.jpg' %}">
+      <div class="container">
+        <div class="overlay-content text-white py-lg-5">
+          <h3 class="display-3 font-weight-bold text-serif text-shadow mb-5">Ready for Joining in Manis Infotech ?</h3><a class="btn btn-light" href="{% url 'employee' %}">Get started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="position-relative z-index-10 d-print-none">
+      <!-- Main block - menus, subscribe form-->
+      <div class="py-6 bg-gray-200 text-muted">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <div class="font-weight-bold text-uppercase text-dark mb-3">Follow Us</div>
+              <p>Here, we will create only editible things   @ Lucky Lusan</p>
+              <ul class="list-inline">
+                <li class="list-inline-item"><a title="twitter" class="text-muted text-hover-primary" href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a title="facebook" class="text-muted text-hover-primary" href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li class="list-inline-item"><a title="instagram" class="text-muted text-hover-primary" href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a title="pinterest" class="text-muted text-hover-primary" href="#" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+                <li class="list-inline-item"><a title="vimeo" class="text-muted text-hover-primary" href="#" target="_blank"><i class="fab fa-vimeo"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
+              <h6 class="text-uppercase text-dark mb-3">Meet Us</h6>
+              <ul class="list-unstyled">
+                <li><a class="text-muted" href="contact.html">Contact                                   </a></li>
+                <li><a class="text-muted" href="pricing.html">E-Mail                                   </a></li>
+                <li><a class="text-muted" href="text.html">FaceBook                                   </a></li>
+
+              </ul>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright section of the footer-->
+      <div class="py-4 font-weight-light bg-gray-800 text-gray-300">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-left">
+              <p class="text-sm mb-md-0">© 2019 Your company.  All rights reserved.</p>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-inline mb-0 mt-2 mt-md-0 text-center text-md-right">
+                <li class="list-inline-item">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer end-->
+    <!-- JavaScript files-->
+    <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite -
+      //   see more here
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // to avoid CORS issues when viewing using file:// protocol, using the demo URL for the SVG sprite
+      // use your own URL in production, please :)
+      // https://demo.bootstrapious.com/directory/1-0/icons/orion-svg-sprite.svg
+      //- injectSvgSprite('icons/orion-svg-sprite.52f2f033.svg');
+      injectSvgSprite('https://demo.bootstrapious.com/directory/1-1/icons/orion-svg-sprite.svg');
+
+    </script>
+    <!-- jQuery-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-2/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap JS bundle - Bootstrap + PopperJS-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Magnific Popup - Lightbox for the gallery-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-2/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Smooth scroll-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-2/vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <!-- Bootstrap Select-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-2/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <!-- Object Fit Images - Fallback for browsers that don't support object-fit-->
+    <script src="https://d19m59y37dris4.cloudfront.net/directory/1-2/vendor/object-fit-images/ofi.min.js"></script>
+    <!-- Swiper Carousel                       -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
+    <script>var basePath = ''</script>
+    <!-- Main Theme JS file    -->
+    <script src="js/theme.630a017a.js"></script>
+
+</body></html>

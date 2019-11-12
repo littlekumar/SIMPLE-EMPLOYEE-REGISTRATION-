@@ -1,0 +1,271 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body style="background: #8fd19e">
+
+
+
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">Manager</a>
+
+
+  <form class="form-inline" action="{% url 'home'%}">
+
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+  </form>
+</nav>
+
+<h1 align="center" style="color: #a71d2a">Employee's Personal Data</h1>
+
+<form method="get">
+
+{% if data %}
+<table align="center" border="2">
+
+    <tr style="color: #0e3b18" bgcolor="#bdb76b">
+        <th>ID_NO</th>
+        <th>FIRST_NAME</th>
+        <th>LAST_NAME</th>
+        <th>EMAIL_ID</th>
+        <th>Date_of_Birth</th>
+        <th>MOBILE_NUMBER</th>
+        <th>image</th>
+        <th>GENDER</th>
+        <th>ADDRESS</th>
+        <th>CITY</th>
+        <th>PIN_CODE</th>
+        <th>STATE</th>
+        <th>COUNTRY</th>
+        <th>See More</th>
+    </tr>
+
+    {% for x in data %}
+     <tr>
+        <th>{{x.ID_NO}}</th>
+        <th>{{x.FIRST_NAME}}</th>
+        <th>{{x.LAST_NAME}}</th>
+        <th>{{x.EMAIL_ID}}</th>
+        <th>{{x.Date_of_Birth}}</th>
+        <th>{{x.MOBILE_NUMBER}}</th>
+        <th><img src="{{x.image.url}}" height="80" width="100"></th>
+        <th>{{x.GENDER}}</th>
+        <th>{{x.ADDRESS}}</th>
+        <th>{{x.CITY}}</th>
+        <th>{{x.PIN_CODE}}</th>
+        <th>{{x.STATE}}</th>
+        <th>{{x.COUNTRY}}</th>
+        <th><a href="{% url 'seemore' %}?id={{ x.ID_NO }}">Yes</a> </th>
+    </tr>
+    {% endfor %}
+{% endif %}
+
+{% if edu %}
+<table align="center" border="2">
+
+    <tr style="color: #0e3b18" bgcolor="#bdb76b">
+        <th>ID_NO</th>
+        <th>FIRST_NAME</th>
+        <th>LAST_NAME</th>
+        <th>EMAIL_ID</th>
+        <th>Date_of_Birth</th>
+        <th>MOBILE_NUMBER</th>
+        <th>image</th>
+        <th>GENDER</th>
+        <th>ADDRESS</th>
+        <th>CITY</th>
+        <th>PIN_CODE</th>
+        <th>STATE</th>
+        <th>COUNTRY</th>
+        <th>See More</th>
+    </tr>
+
+    {% for x in edu.data %}
+     <tr>
+        <th>{{x.ID_NO}}</th>
+        <th>{{x.FIRST_NAME}}</th>
+        <th>{{x.LAST_NAME}}</th>
+        <th>{{x.EMAIL_ID}}</th>
+        <th>{{x.Date_of_Birth}}</th>
+        <th>{{x.MOBILE_NUMBER}}</th>
+        <th><img src="{{x.image.url}}" height="80" width="100"></th>
+        <th>{{x.GENDER}}</th>
+        <th>{{x.ADDRESS}}</th>
+        <th>{{x.CITY}}</th>
+        <th>{{x.PIN_CODE}}</th>
+        <th>{{x.STATE}}</th>
+        <th>{{x.COUNTRY}}</th>
+        <th><a href="{% url 'seemore' %}?id={{ x.ID_NO }}">Yes</a> </th>
+    </tr>
+    {% endfor %}
+{% endif %}
+
+
+
+{% if edu %}
+
+<table align="center" border="2" width="1375">
+
+    <tr style="color: #0e3b18" bgcolor="#bdb76b">
+        <h4 align="center">Xth Details</h4>
+        <th>
+            <th>ID_NO</th>
+            <th>Start_Date</th>
+            <th>Completion_Date</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Education_Institution</th>
+            <th>PERCENTAGE</th>
+            <th>Maths_PERCENTAGE</th>
+            <th>Board_or_University</th>
+            <th>Cousre_Type</th>
+        </th>
+    </tr>
+    {% for x in edu.edu_xth_details_employee %}
+     <tr>
+    <th>
+            <th>{{x.ID_NO}}</th>
+            <th>{{ x.Start_Date}}</th>
+            <th>{{x.Completion_Date}}</th>
+            <th>{{x.Country}}</th>
+            <th>{{x.State}}</th>
+            <th>{{x.City}}</th>
+            <th>{{x.Education_Institution}}</th>
+            <th>{{x.PERCENTAGE}}</th>
+            <th>{{x.Maths_PERCENTAGE}}</th>
+            <th>{{x.Board_or_University}}</th>
+            <th>{{x.Cousre_Type}}</th>
+     </th>
+     </tr>
+    {% endfor %}
+</table>
+<table align="center" border="2" width="1375">
+    <tr style="color: #0e3b18" bgcolor="#bdb76b">
+        <h4 align="center">Inter Details</h4>
+        <th>
+            <th>ID_NO</th>
+            <th>Start_Date</th>
+            <th>Completion_Date</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Education_Institution</th>
+            <th>PERCENTAGE</th>
+            <th>Board_or_University</th>
+            <th>Cousre_Type</th>
+        </th>
+    </tr>
+    {% for x in edu.edu_inter_details_employee %}
+     <tr>
+    <th>
+            <th>{{x.ID_NO}}</th>
+            <th>{{ x.Start_Date}}</th>
+            <th>{{x.Completion_Date}}</th>
+            <th>{{x.Country}}</th>
+            <th>{{x.State}}</th>
+            <th>{{x.City}}</th>
+            <th>{{x.Education_Institution}}</th>
+            <th>{{x.PERCENTAGE}}</th>
+            <th>{{x.Board_or_University}}</th>
+            <th>{{x.Cousre_Type}}</th>
+     </th>
+     </tr>
+    {% endfor %}
+</table>
+
+
+<table align="center" border="2" width="1375">
+    <tr style="color: #0e3b18" bgcolor="#bdb76b">
+        <h4 align="center">UG Details</h4>
+        <th>
+            <th>ID_NO</th>
+            <th>Start_Date</th>
+            <th>Completion_Date</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Education_Institution</th>
+            <th>PERCENTAGE</th>
+            <th>Board_or_University</th>
+            <th>Cousre_Type</th>
+        </th>
+    </tr>
+    {% for x in edu.edu_ug_details_employee %}
+     <tr>
+    <th>
+            <th>{{x.ID_NO}}</th>
+            <th>{{ x.Start_Date}}</th>
+            <th>{{x.Completion_Date}}</th>
+            <th>{{x.Country}}</th>
+            <th>{{x.State}}</th>
+            <th>{{x.City}}</th>
+            <th>{{x.Education_Institution}}</th>
+            <th>{{x.PERCENTAGE}}</th>
+            <th>{{x.Board_or_University}}</th>
+            <th>{{x.Cousre_Type}}</th>
+     </th>
+     </tr>
+    {% endfor %}
+</table>
+
+
+<table align="center" border="2" width="1375">
+    <tr style="color: #0e3b18" bgcolor="#bdb76b">
+        <h4 align="center">PG Details</h4>
+        <th>
+            <th>ID_NO</th>
+            <th>Start_Date</th>
+            <th>Completion_Date</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Education_Institution</th>
+            <th>PERCENTAGE</th>
+            <th>Board_or_University</th>
+            <th>Cousre_Type</th>
+        </th>
+    </tr>
+    {% for x in edu.edu_pg_details_employee %}
+     <tr>
+    <th>
+            <th>{{x.ID_NO}}</th>
+            <th>{{ x.Start_Date}}</th>
+            <th>{{x.Completion_Date}}</th>
+            <th>{{x.Country}}</th>
+            <th>{{x.State}}</th>
+            <th>{{x.City}}</th>
+            <th>{{x.Education_Institution}}</th>
+            <th>{{x.PERCENTAGE}}</th>
+            <th>{{x.Board_or_University}}</th>
+            <th>{{x.Cousre_Type}}</th>
+     </th>
+     </tr>
+    {% endfor %}
+</table>
+
+{% endif %}
+    </table>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

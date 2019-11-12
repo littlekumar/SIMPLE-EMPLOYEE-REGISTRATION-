@@ -1,0 +1,269 @@
+{% include 'head.html' %}
+{% include 'head_buttons.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Registration</title>
+</head>
+<body>
+<br><br>
+<form action="{% url 'store_user' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    <table align="center">
+
+        <tr><th><table align="center" width="1000">
+        <tr>
+            <th align="center">
+                <h1 style="color: brown"> Employee Registration</h1>
+            </th>
+
+        </tr>
+
+         <tr>
+             <th style="text-align: center" width="100">
+                  <div class="row">
+                                    <div class="col">
+                                        <label>
+                                            <input type="text" class="form-control"  name="first name" placeholder="First name">
+                                        </label>
+                                    </div>
+                                    <div class="col">
+                                        <label>
+                                            <input type="text" class="form-control" name="last name" placeholder="Last name">
+                                        </label>
+                                    </div>
+                  </div>
+             </th>
+
+
+         </tr>
+
+         <tr style="width: 500cm
+    ">
+        <th style="text-align: center">
+                                                 <div>
+                                                     <div class="placeholder" aria-hidden="true">Date Of Birth</div>
+                                                     <label>
+                                                         <input type="date" name="birthday" placeholder="Date Of Birt" required>
+                                                     </label>
+                                                 </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                              <label class="form-check-label" for="defaultCheck1">
+                                Default checkbox
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                              <label class="form-check-label" for="defaultCheck2">
+                                Disabled checkbox
+                              </label>
+                            </div>
+
+                            <div>
+                                            <div>
+                                                <div class="placeholder" aria-hidden="true">Mobile number or email address</div>
+                                                <input type="text" class="inputtext _58mg _5dba _2ph-" data-type="text" name="email" value="" aria-required="true" placeholder="" aria-label="Mobile number or email address" id="u_0_q">
+                                            </div>
+
+
+                                                <div>
+                                                    <div class="placeholder" aria-hidden="true">Re-enter email address</div>
+                                                    <input type="text" class="inputtext _58mg _5dba _2ph-" data-type="text" name="reg_email_confirmation__" value="" aria-required="true" placeholder="" aria-label="Re-enter email address" id="u_0_t">
+                                                </div>
+                                        <div>
+                                            <div class="placeholder" aria-hidden="true">New password</div>
+                                            <input type="password" class="inputtext _58mg _5dba _2ph-" data-type="password" autocomplete="new-password" name="password" aria-required="true" placeholder="" aria-label="New password" id="u_0_x">
+                                        </div><br>
+                            <div>
+                                            <input type="file" name="image"  placeholder="required" >
+                                        </div>
+
+                                        <div class="mbm _br- _a4y hidden_elem" id="u_0_u">
+                                                    <div class="uiStickyPlaceholderInput uiStickyPlaceholderEmptyInput">
+                                                        <div class="placeholder" aria-hidden="true">Mobile number</div>
+                                                        <input type="text" class="inputtext _58mg _5dba _2ph-" data-type="text" name="phone" value="" placeholder="" aria-label="Mobile number" id="u_0_v">
+                                                    </div>
+                                                </div>
+                        </div>
+
+    </th>
+     </tr>
+
+            </table></th></tr>
+        <tr><th><table align="center">
+
+        <tr><th>GENDER</th></tr>
+        <tr><th>
+            Male <input type="radio" name="Gender" value="Male" />
+            Female <input type="radio" name="Gender" value="Female" />
+            </th></tr>
+
+            <!----- Address ---------------------------------------------------------->
+        <tr><th align="center">
+            <h4>
+                    <i class="icon-file"></i>Mailing Address
+                </h4>
+
+                <div id="ContentPlaceHolder1_Personal_updatePanel1">
+
+                        <script type="text/javascript">
+                            Sys.Application.add_load(OnReady);
+                        </script>
+
+                        <div class="form-wrap">
+                            <ul class="form">
+
+                                <li>
+                                    <label for="AddressLine1" class="placeholder-alt">
+                                        Address Line 1 <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="text-input">
+                                        <input name="ctl00$ContentPlaceHolder1$Personal$txtAddressLine1" type="text" maxlength="60" id="ContentPlaceHolder1_Personal_txtAddressLine1" class="text" autocomplete="false" placeholder="Address Line 1">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="AddressLine2" class="placeholder-alt">
+                                        Address Line 2
+                                    </label>
+                                    <div class="text-input">
+                                        <input name="ctl00$ContentPlaceHolder1$Personal$txtAddressLine2" type="text" maxlength="40" id="ContentPlaceHolder1_Personal_txtAddressLine2" class="text" placeholder="Address Line 2">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="Country" class="placeholder-alt">
+                                        Country <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="text-input">
+                                        <input name="ctl00$ContentPlaceHolder1$Personal$txtCountrytypeAhead" type="text" maxlength="80" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$Personal$txtCountrytypeAhead\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ContentPlaceHolder1_Personal_txtCountrytypeAhead" class="filterTxt typehead countryTypehead text" autocomplete="false" placeholder="Country">
+                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$Personal$hdnFieldCountry" id="ContentPlaceHolder1_Personal_hdnFieldCountry" value="[{&quot;name&quot;:&quot;Afghanistan&quot;,&quot;id&quot;:&quot;AF&quot;},{&quot;name&quot;:&quot;Albania&quot;,&quot;id&quot;:&quot;AL&quot;},{&quot;name&quot;:&quot;Algeria&quot;,&quot;id&quot;:&quot;DZ&quot;},{&quot;name&quot;:&quot;Amer.Virgin Is.&quot;,&quot;id&quot;:&quot;VI&quot;},{&quot;name&quot;:&quot;Andorra&quot;,&quot;id&quot;:&quot;AD&quot;},{&quot;name&quot;:&quot;Angola&quot;,&quot;id&quot;:&quot;AO&quot;},{&quot;name&quot;:&quot;Anguilla&quot;,&quot;id&quot;:&quot;AI&quot;},{&quot;name&quot;:&quot;Antarctica&quot;,&quot;id&quot;:&quot;AQ&quot;},{&quot;name&quot;:&quot;Antigua/Barbuda&quot;,&quot;id&quot;:&quot;AG&quot;},{&quot;name&quot;:&quot;Argentina&quot;,&quot;id&quot;:&quot;AR&quot;},{&quot;name&quot;:&quot;Armenia&quot;,&quot;id&quot;:&quot;AM&quot;},{&quot;name&quot;:&quot;Aruba&quot;,&quot;id&quot;:&quot;AW&quot;},{&quot;name&quot;:&quot;Australia&quot;,&quot;id&quot;:&quot;AU&quot;},{&quot;name&quot;:&quot;Austria&quot;,&quot;id&quot;:&quot;AT&quot;},{&quot;name&quot;:&quot;Azerbaijan&quot;,&quot;id&quot;:&quot;AZ&quot;},{&quot;name&quot;:&quot;Bahamas&quot;,&quot;id&quot;:&quot;BS&quot;},{&quot;name&quot;:&quot;Bahrain&quot;,&quot;id&quot;:&quot;BH&quot;},{&quot;name&quot;:&quot;Bangladesh&quot;,&quot;id&quot;:&quot;BD&quot;},{&quot;name&quot;:&quot;Barbados&quot;,&quot;id&quot;:&quot;BB&quot;},{&quot;name&quot;:&quot;Belarus&quot;,&quot;id&quot;:&quot;BY&quot;},{&quot;name&quot;:&quot;Belgium&quot;,&quot;id&quot;:&quot;BE&quot;},{&quot;name&quot;:&quot;Belize&quot;,&quot;id&quot;:&quot;BZ&quot;},{&quot;name&quot;:&quot;Benin&quot;,&quot;id&quot;:&quot;BJ&quot;},{&quot;name&quot;:&quot;Bermuda&quot;,&quot;id&quot;:&quot;BM&quot;},{&quot;name&quot;:&quot;Bhutan&quot;,&quot;id&quot;:&quot;BT&quot;},{&quot;name&quot;:&quot;Bolivia&quot;,&quot;id&quot;:&quot;BO&quot;},{&quot;name&quot;:&quot;Bosnia-Herz.&quot;,&quot;id&quot;:&quot;BA&quot;},{&quot;name&quot;:&quot;Botswana&quot;,&quot;id&quot;:&quot;BW&quot;},{&quot;name&quot;:&quot;Bouvet Islands&quot;,&quot;id&quot;:&quot;BV&quot;},{&quot;name&quot;:&quot;Brazil&quot;,&quot;id&quot;:&quot;BR&quot;},{&quot;name&quot;:&quot;Brit.Ind.Oc.Ter&quot;,&quot;id&quot;:&quot;IO&quot;},{&quot;name&quot;:&quot;Brit.Virgin Is.&quot;,&quot;id&quot;:&quot;VG&quot;},{&quot;name&quot;:&quot;Brunei Daruss.&quot;,&quot;id&quot;:&quot;BN&quot;},{&quot;name&quot;:&quot;Bulgaria&quot;,&quot;id&quot;:&quot;BG&quot;},{&quot;name&quot;:&quot;Burkina Faso&quot;,&quot;id&quot;:&quot;BF&quot;},{&quot;name&quot;:&quot;Burma&quot;,&quot;id&quot;:&quot;MM&quot;},{&quot;name&quot;:&quot;Burundi&quot;,&quot;id&quot;:&quot;BI&quot;},{&quot;name&quot;:&quot;CAR&quot;,&quot;id&quot;:&quot;CF&quot;},{&quot;name&quot;:&quot;Cambodia&quot;,&quot;id&quot;:&quot;KH&quot;},{&quot;name&quot;:&quot;Cameroon&quot;,&quot;id&quot;:&quot;CM&quot;},{&quot;name&quot;:&quot;Canada&quot;,&quot;id&quot;:&quot;CA&quot;},{&quot;name&quot;:&quot;Cape Verde&quot;,&quot;id&quot;:&quot;CV&quot;},{&quot;name&quot;:&quot;Cayman Islands&quot;,&quot;id&quot;:&quot;KY&quot;},{&quot;name&quot;:&quot;Chad&quot;,&quot;id&quot;:&quot;TD&quot;},{&quot;name&quot;:&quot;Chile&quot;,&quot;id&quot;:&quot;CL&quot;},{&quot;name&quot;:&quot;China&quot;,&quot;id&quot;:&quot;CN&quot;},{&quot;name&quot;:&quot;Christmas Islnd&quot;,&quot;id&quot;:&quot;CX&quot;},{&quot;name&quot;:&quot;Coconut Islands&quot;,&quot;id&quot;:&quot;CC&quot;},{&quot;name&quot;:&quot;Colombia&quot;,&quot;id&quot;:&quot;CO&quot;},{&quot;name&quot;:&quot;Comoros&quot;,&quot;id&quot;:&quot;KM&quot;},{&quot;name&quot;:&quot;Cook Islands&quot;,&quot;id&quot;:&quot;CK&quot;},{&quot;name&quot;:&quot;Costa Rica&quot;,&quot;id&quot;:&quot;CR&quot;},{&quot;name&quot;:&quot;Cote d'Ivoire&quot;,&quot;id&quot;:&quot;CI&quot;},{&quot;name&quot;:&quot;Croatia&quot;,&quot;id&quot;:&quot;HR&quot;},{&quot;name&quot;:&quot;Cuba&quot;,&quot;id&quot;:&quot;CU&quot;},{&quot;name&quot;:&quot;Cyprus&quot;,&quot;id&quot;:&quot;CY&quot;},{&quot;name&quot;:&quot;Czech Republic&quot;,&quot;id&quot;:&quot;CZ&quot;},{&quot;name&quot;:&quot;Dem. Rep. Congo&quot;,&quot;id&quot;:&quot;CD&quot;},{&quot;name&quot;:&quot;Denmark&quot;,&quot;id&quot;:&quot;DK&quot;},{&quot;name&quot;:&quot;Djibouti&quot;,&quot;id&quot;:&quot;DJ&quot;},{&quot;name&quot;:&quot;Dominica&quot;,&quot;id&quot;:&quot;DM&quot;},{&quot;name&quot;:&quot;Dominican Rep.&quot;,&quot;id&quot;:&quot;DO&quot;},{&quot;name&quot;:&quot;Dutch Antilles&quot;,&quot;id&quot;:&quot;AN&quot;},{&quot;name&quot;:&quot;East Timor&quot;,&quot;id&quot;:&quot;TP&quot;},{&quot;name&quot;:&quot;East Timor&quot;,&quot;id&quot;:&quot;TL&quot;},{&quot;name&quot;:&quot;Ecuador&quot;,&quot;id&quot;:&quot;EC&quot;},{&quot;name&quot;:&quot;Egypt&quot;,&quot;id&quot;:&quot;EG&quot;},{&quot;name&quot;:&quot;El Salvador&quot;,&quot;id&quot;:&quot;SV&quot;},{&quot;name&quot;:&quot;Equatorial Guin&quot;,&quot;id&quot;:&quot;GQ&quot;},{&quot;name&quot;:&quot;Eritrea&quot;,&quot;id&quot;:&quot;ER&quot;},{&quot;name&quot;:&quot;Estonia&quot;,&quot;id&quot;:&quot;EE&quot;},{&quot;name&quot;:&quot;Ethiopia&quot;,&quot;id&quot;:&quot;ET&quot;},{&quot;name&quot;:&quot;Falkland Islnds&quot;,&quot;id&quot;:&quot;FK&quot;},{&quot;name&quot;:&quot;Faroe Islands&quot;,&quot;id&quot;:&quot;FO&quot;},{&quot;name&quot;:&quot;Fiji&quot;,&quot;id&quot;:&quot;FJ&quot;},{&quot;name&quot;:&quot;Finland&quot;,&quot;id&quot;:&quot;FI&quot;},{&quot;name&quot;:&quot;France&quot;,&quot;id&quot;:&quot;FR&quot;},{&quot;name&quot;:&quot;Frenc.Polynesia&quot;,&quot;id&quot;:&quot;PF&quot;},{&quot;name&quot;:&quot;French Guayana&quot;,&quot;id&quot;:&quot;GF&quot;},{&quot;name&quot;:&quot;French S.Territ&quot;,&quot;id&quot;:&quot;TF&quot;},{&quot;name&quot;:&quot;Gabon&quot;,&quot;id&quot;:&quot;GA&quot;},{&quot;name&quot;:&quot;Gambia&quot;,&quot;id&quot;:&quot;GM&quot;},{&quot;name&quot;:&quot;Georgia&quot;,&quot;id&quot;:&quot;GE&quot;},{&quot;name&quot;:&quot;Germany&quot;,&quot;id&quot;:&quot;DE&quot;},{&quot;name&quot;:&quot;Ghana&quot;,&quot;id&quot;:&quot;GH&quot;},{&quot;name&quot;:&quot;Gibraltar&quot;,&quot;id&quot;:&quot;GI&quot;},{&quot;name&quot;:&quot;Greece&quot;,&quot;id&quot;:&quot;GR&quot;},{&quot;name&quot;:&quot;Greenland&quot;,&quot;id&quot;:&quot;GL&quot;},{&quot;name&quot;:&quot;Grenada&quot;,&quot;id&quot;:&quot;GD&quot;},{&quot;name&quot;:&quot;Guadeloupe&quot;,&quot;id&quot;:&quot;GP&quot;},{&quot;name&quot;:&quot;Guam&quot;,&quot;id&quot;:&quot;GU&quot;},{&quot;name&quot;:&quot;Guatemala&quot;,&quot;id&quot;:&quot;GT&quot;},{&quot;name&quot;:&quot;Guinea&quot;,&quot;id&quot;:&quot;GN&quot;},{&quot;name&quot;:&quot;Guinea-Bissau&quot;,&quot;id&quot;:&quot;GW&quot;},{&quot;name&quot;:&quot;Guyana&quot;,&quot;id&quot;:&quot;GY&quot;},{&quot;name&quot;:&quot;Haiti&quot;,&quot;id&quot;:&quot;HT&quot;},{&quot;name&quot;:&quot;Heard/McDon.Isl&quot;,&quot;id&quot;:&quot;HM&quot;},{&quot;name&quot;:&quot;Honduras&quot;,&quot;id&quot;:&quot;HN&quot;},{&quot;name&quot;:&quot;Hong Kong&quot;,&quot;id&quot;:&quot;HK&quot;},{&quot;name&quot;:&quot;Hungary&quot;,&quot;id&quot;:&quot;HU&quot;},{&quot;name&quot;:&quot;Iceland&quot;,&quot;id&quot;:&quot;IS&quot;},{&quot;name&quot;:&quot;India&quot;,&quot;id&quot;:&quot;IN&quot;},{&quot;name&quot;:&quot;Indonesia&quot;,&quot;id&quot;:&quot;ID&quot;},{&quot;name&quot;:&quot;Iran&quot;,&quot;id&quot;:&quot;IR&quot;},{&quot;name&quot;:&quot;Iraq&quot;,&quot;id&quot;:&quot;IQ&quot;},{&quot;name&quot;:&quot;Ireland&quot;,&quot;id&quot;:&quot;IE&quot;},{&quot;name&quot;:&quot;Israel&quot;,&quot;id&quot;:&quot;IL&quot;},{&quot;name&quot;:&quot;Italy&quot;,&quot;id&quot;:&quot;IT&quot;},{&quot;name&quot;:&quot;Jamaica&quot;,&quot;id&quot;:&quot;JM&quot;},{&quot;name&quot;:&quot;Japan&quot;,&quot;id&quot;:&quot;JP&quot;},{&quot;name&quot;:&quot;Jordan&quot;,&quot;id&quot;:&quot;JO&quot;},{&quot;name&quot;:&quot;Kazakhstan&quot;,&quot;id&quot;:&quot;KZ&quot;},{&quot;name&quot;:&quot;Kenya&quot;,&quot;id&quot;:&quot;KE&quot;},{&quot;name&quot;:&quot;Kiribati&quot;,&quot;id&quot;:&quot;KI&quot;},{&quot;name&quot;:&quot;Kuwait&quot;,&quot;id&quot;:&quot;KW&quot;},{&quot;name&quot;:&quot;Kyrgyzstan&quot;,&quot;id&quot;:&quot;KG&quot;},{&quot;name&quot;:&quot;Laos&quot;,&quot;id&quot;:&quot;LA&quot;},{&quot;name&quot;:&quot;Latvia&quot;,&quot;id&quot;:&quot;LV&quot;},{&quot;name&quot;:&quot;Lebanon&quot;,&quot;id&quot;:&quot;LB&quot;},{&quot;name&quot;:&quot;Lesotho&quot;,&quot;id&quot;:&quot;LS&quot;},{&quot;name&quot;:&quot;Liberia&quot;,&quot;id&quot;:&quot;LR&quot;},{&quot;name&quot;:&quot;Libya&quot;,&quot;id&quot;:&quot;LY&quot;},{&quot;name&quot;:&quot;Liechtenstein&quot;,&quot;id&quot;:&quot;LI&quot;},{&quot;name&quot;:&quot;Lithuania&quot;,&quot;id&quot;:&quot;LT&quot;},{&quot;name&quot;:&quot;Luxembourg&quot;,&quot;id&quot;:&quot;LU&quot;},{&quot;name&quot;:&quot;Macau&quot;,&quot;id&quot;:&quot;MO&quot;},{&quot;name&quot;:&quot;Macedonia&quot;,&quot;id&quot;:&quot;MK&quot;},{&quot;name&quot;:&quot;Madagascar&quot;,&quot;id&quot;:&quot;MG&quot;},{&quot;name&quot;:&quot;Malawi&quot;,&quot;id&quot;:&quot;MW&quot;},{&quot;name&quot;:&quot;Malaysia&quot;,&quot;id&quot;:&quot;MY&quot;},{&quot;name&quot;:&quot;Maldives&quot;,&quot;id&quot;:&quot;MV&quot;},{&quot;name&quot;:&quot;Mali&quot;,&quot;id&quot;:&quot;ML&quot;},{&quot;name&quot;:&quot;Malta&quot;,&quot;id&quot;:&quot;MT&quot;},{&quot;name&quot;:&quot;Marshall Islnds&quot;,&quot;id&quot;:&quot;MH&quot;},{&quot;name&quot;:&quot;Martinique&quot;,&quot;id&quot;:&quot;MQ&quot;},{&quot;name&quot;:&quot;Mauretania&quot;,&quot;id&quot;:&quot;MR&quot;},{&quot;name&quot;:&quot;Mauritius&quot;,&quot;id&quot;:&quot;MU&quot;},{&quot;name&quot;:&quot;Mayotte&quot;,&quot;id&quot;:&quot;YT&quot;},{&quot;name&quot;:&quot;Mexico&quot;,&quot;id&quot;:&quot;MX&quot;},{&quot;name&quot;:&quot;Micronesia&quot;,&quot;id&quot;:&quot;FM&quot;},{&quot;name&quot;:&quot;Minor Outl.Isl.&quot;,&quot;id&quot;:&quot;UM&quot;},{&quot;name&quot;:&quot;Moldova&quot;,&quot;id&quot;:&quot;MD&quot;},{&quot;name&quot;:&quot;Monaco&quot;,&quot;id&quot;:&quot;MC&quot;},{&quot;name&quot;:&quot;Mongolia&quot;,&quot;id&quot;:&quot;MN&quot;},{&quot;name&quot;:&quot;Montserrat&quot;,&quot;id&quot;:&quot;MS&quot;},{&quot;name&quot;:&quot;Morocco&quot;,&quot;id&quot;:&quot;MA&quot;},{&quot;name&quot;:&quot;Mozambique&quot;,&quot;id&quot;:&quot;MZ&quot;},{&quot;name&quot;:&quot;N.Mariana Islnd&quot;,&quot;id&quot;:&quot;MP&quot;},{&quot;name&quot;:&quot;Namibia&quot;,&quot;id&quot;:&quot;NA&quot;},{&quot;name&quot;:&quot;Nauru&quot;,&quot;id&quot;:&quot;NR&quot;},{&quot;name&quot;:&quot;Nepal&quot;,&quot;id&quot;:&quot;NP&quot;},{&quot;name&quot;:&quot;Netherlands&quot;,&quot;id&quot;:&quot;NL&quot;},{&quot;name&quot;:&quot;New Caledonia&quot;,&quot;id&quot;:&quot;NC&quot;},{&quot;name&quot;:&quot;New Zealand&quot;,&quot;id&quot;:&quot;NZ&quot;},{&quot;name&quot;:&quot;Nicaragua&quot;,&quot;id&quot;:&quot;NI&quot;},{&quot;name&quot;:&quot;Niger&quot;,&quot;id&quot;:&quot;NE&quot;},{&quot;name&quot;:&quot;Nigeria&quot;,&quot;id&quot;:&quot;NG&quot;},{&quot;name&quot;:&quot;Niue&quot;,&quot;id&quot;:&quot;NU&quot;},{&quot;name&quot;:&quot;Norfolk Islands&quot;,&quot;id&quot;:&quot;NF&quot;},{&quot;name&quot;:&quot;North Korea&quot;,&quot;id&quot;:&quot;KP&quot;},{&quot;name&quot;:&quot;Norway&quot;,&quot;id&quot;:&quot;NO&quot;},{&quot;name&quot;:&quot;Oman&quot;,&quot;id&quot;:&quot;OM&quot;},{&quot;name&quot;:&quot;Pakistan&quot;,&quot;id&quot;:&quot;PK&quot;},{&quot;name&quot;:&quot;Palau&quot;,&quot;id&quot;:&quot;PW&quot;},{&quot;name&quot;:&quot;Palestine&quot;,&quot;id&quot;:&quot;PS&quot;},{&quot;name&quot;:&quot;Panama&quot;,&quot;id&quot;:&quot;PA&quot;},{&quot;name&quot;:&quot;Pap. New Guinea&quot;,&quot;id&quot;:&quot;PG&quot;},{&quot;name&quot;:&quot;Paraguay&quot;,&quot;id&quot;:&quot;PY&quot;},{&quot;name&quot;:&quot;Peru&quot;,&quot;id&quot;:&quot;PE&quot;},{&quot;name&quot;:&quot;Philippines&quot;,&quot;id&quot;:&quot;PH&quot;},{&quot;name&quot;:&quot;Pitcairn Islnds&quot;,&quot;id&quot;:&quot;PN&quot;},{&quot;name&quot;:&quot;Poland&quot;,&quot;id&quot;:&quot;PL&quot;},{&quot;name&quot;:&quot;Portugal&quot;,&quot;id&quot;:&quot;PT&quot;},{&quot;name&quot;:&quot;Puerto Rico&quot;,&quot;id&quot;:&quot;PR&quot;},{&quot;name&quot;:&quot;Qatar&quot;,&quot;id&quot;:&quot;QA&quot;},{&quot;name&quot;:&quot;Rep.of Congo&quot;,&quot;id&quot;:&quot;CG&quot;},{&quot;name&quot;:&quot;Reunion&quot;,&quot;id&quot;:&quot;RE&quot;},{&quot;name&quot;:&quot;Romania&quot;,&quot;id&quot;:&quot;RO&quot;},{&quot;name&quot;:&quot;Russian Fed.&quot;,&quot;id&quot;:&quot;RU&quot;},{&quot;name&quot;:&quot;Rwanda&quot;,&quot;id&quot;:&quot;RW&quot;},{&quot;name&quot;:&quot;S. Sandwich Ins&quot;,&quot;id&quot;:&quot;GS&quot;},{&quot;name&quot;:&quot;S.Tome,Principe&quot;,&quot;id&quot;:&quot;ST&quot;},{&quot;name&quot;:&quot;Saint Helena&quot;,&quot;id&quot;:&quot;SH&quot;},{&quot;name&quot;:&quot;Samoa&quot;,&quot;id&quot;:&quot;WS&quot;},{&quot;name&quot;:&quot;Samoa, America&quot;,&quot;id&quot;:&quot;AS&quot;},{&quot;name&quot;:&quot;San Marino&quot;,&quot;id&quot;:&quot;SM&quot;},{&quot;name&quot;:&quot;Saudi Arabia&quot;,&quot;id&quot;:&quot;SA&quot;},{&quot;name&quot;:&quot;Senegal&quot;,&quot;id&quot;:&quot;SN&quot;},{&quot;name&quot;:&quot;Serbia/Monten.&quot;,&quot;id&quot;:&quot;CS&quot;},{&quot;name&quot;:&quot;Seychelles&quot;,&quot;id&quot;:&quot;SC&quot;},{&quot;name&quot;:&quot;Sierra Leone&quot;,&quot;id&quot;:&quot;SL&quot;},{&quot;name&quot;:&quot;Singapore&quot;,&quot;id&quot;:&quot;SG&quot;},{&quot;name&quot;:&quot;Slovakia&quot;,&quot;id&quot;:&quot;SK&quot;},{&quot;name&quot;:&quot;Slovenia&quot;,&quot;id&quot;:&quot;SI&quot;},{&quot;name&quot;:&quot;Solomon Islands&quot;,&quot;id&quot;:&quot;SB&quot;},{&quot;name&quot;:&quot;Somalia&quot;,&quot;id&quot;:&quot;SO&quot;},{&quot;name&quot;:&quot;South Africa&quot;,&quot;id&quot;:&quot;ZA&quot;},{&quot;name&quot;:&quot;South Korea&quot;,&quot;id&quot;:&quot;KR&quot;},{&quot;name&quot;:&quot;Spain&quot;,&quot;id&quot;:&quot;ES&quot;},{&quot;name&quot;:&quot;Sri Lanka&quot;,&quot;id&quot;:&quot;LK&quot;},{&quot;name&quot;:&quot;St Kitts&amp;Nevis&quot;,&quot;id&quot;:&quot;KN&quot;},{&quot;name&quot;:&quot;St. Lucia&quot;,&quot;id&quot;:&quot;LC&quot;},{&quot;name&quot;:&quot;St. Vincent&quot;,&quot;id&quot;:&quot;VC&quot;},{&quot;name&quot;:&quot;St.Pier,Miquel.&quot;,&quot;id&quot;:&quot;PM&quot;},{&quot;name&quot;:&quot;Sudan&quot;,&quot;id&quot;:&quot;SD&quot;},{&quot;name&quot;:&quot;Suriname&quot;,&quot;id&quot;:&quot;SR&quot;},{&quot;name&quot;:&quot;Svalbard&quot;,&quot;id&quot;:&quot;SJ&quot;},{&quot;name&quot;:&quot;Swaziland&quot;,&quot;id&quot;:&quot;SZ&quot;},{&quot;name&quot;:&quot;Sweden&quot;,&quot;id&quot;:&quot;SE&quot;},{&quot;name&quot;:&quot;Switzerland&quot;,&quot;id&quot;:&quot;CH&quot;},{&quot;name&quot;:&quot;Syria&quot;,&quot;id&quot;:&quot;SY&quot;},{&quot;name&quot;:&quot;Taiwan&quot;,&quot;id&quot;:&quot;TW&quot;},{&quot;name&quot;:&quot;Tajikistan&quot;,&quot;id&quot;:&quot;TJ&quot;},{&quot;name&quot;:&quot;Tanzania&quot;,&quot;id&quot;:&quot;TZ&quot;},{&quot;name&quot;:&quot;Thailand&quot;,&quot;id&quot;:&quot;TH&quot;},{&quot;name&quot;:&quot;Togo&quot;,&quot;id&quot;:&quot;TG&quot;},{&quot;name&quot;:&quot;Tokelau Islands&quot;,&quot;id&quot;:&quot;TK&quot;},{&quot;name&quot;:&quot;Tonga&quot;,&quot;id&quot;:&quot;TO&quot;},{&quot;name&quot;:&quot;Trinidad,Tobago&quot;,&quot;id&quot;:&quot;TT&quot;},{&quot;name&quot;:&quot;Tunisia&quot;,&quot;id&quot;:&quot;TN&quot;},{&quot;name&quot;:&quot;Turkey&quot;,&quot;id&quot;:&quot;TR&quot;},{&quot;name&quot;:&quot;Turkmenistan&quot;,&quot;id&quot;:&quot;TM&quot;},{&quot;name&quot;:&quot;Turksh Caicosin&quot;,&quot;id&quot;:&quot;TC&quot;},{&quot;name&quot;:&quot;Tuvalu&quot;,&quot;id&quot;:&quot;TV&quot;},{&quot;name&quot;:&quot;USA&quot;,&quot;id&quot;:&quot;US&quot;},{&quot;name&quot;:&quot;Uganda&quot;,&quot;id&quot;:&quot;UG&quot;},{&quot;name&quot;:&quot;Ukraine&quot;,&quot;id&quot;:&quot;UA&quot;},{&quot;name&quot;:&quot;United Kingdom&quot;,&quot;id&quot;:&quot;GB&quot;},{&quot;name&quot;:&quot;Uruguay&quot;,&quot;id&quot;:&quot;UY&quot;},{&quot;name&quot;:&quot;Utd.Arab Emir.&quot;,&quot;id&quot;:&quot;AE&quot;},{&quot;name&quot;:&quot;Uzbekistan&quot;,&quot;id&quot;:&quot;UZ&quot;},{&quot;name&quot;:&quot;Vanuatu&quot;,&quot;id&quot;:&quot;VU&quot;},{&quot;name&quot;:&quot;Vatican City&quot;,&quot;id&quot;:&quot;VA&quot;},{&quot;name&quot;:&quot;Venezuela&quot;,&quot;id&quot;:&quot;VE&quot;},{&quot;name&quot;:&quot;Vietnam&quot;,&quot;id&quot;:&quot;VN&quot;},{&quot;name&quot;:&quot;Wallis,Futuna&quot;,&quot;id&quot;:&quot;WF&quot;},{&quot;name&quot;:&quot;West Sahara&quot;,&quot;id&quot;:&quot;EH&quot;},{&quot;name&quot;:&quot;Yemen&quot;,&quot;id&quot;:&quot;YE&quot;},{&quot;name&quot;:&quot;Zambia&quot;,&quot;id&quot;:&quot;ZM&quot;},{&quot;name&quot;:&quot;Zimbabwe&quot;,&quot;id&quot;:&quot;ZW&quot;}]">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="State" class="placeholder-alt">
+                                        State <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="text-input">
+
+                                        <input name="ctl00$ContentPlaceHolder1$Personal$txtStateTypeahead" type="text" maxlength="80" id="ContentPlaceHolder1_Personal_txtStateTypeahead" class="filterTxt typehead stateTypehead text" autocomplete="off" placeholder="State">
+                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$Personal$hdnFieldState" id="ContentPlaceHolder1_Personal_hdnFieldState">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="city" class="placeholder-alt">
+                                        City <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="text-input">
+                                        <input name="ctl00$ContentPlaceHolder1$Personal$txtCityTypeAhead" type="text" maxlength="40" id="ContentPlaceHolder1_Personal_txtCityTypeAhead" class="text" autocomplete="off" placeholder="City">
+                                        <input type="hidden" name="ctl00$ContentPlaceHolder1$Personal$hdnFieldCity" id="ContentPlaceHolder1_Personal_hdnFieldCity">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="postalzip" class="placeholder-alt">
+                                        Postal/Zip Code <span class="mandatory">*</span>
+                                    </label>
+                                    <div class="text-input">
+                                        <input name="ctl00$ContentPlaceHolder1$Personal$txtPostalZip" type="text" maxlength="10" id="ContentPlaceHolder1_Personal_txtPostalZip" class="text" placeholder="Postal/Zip Code">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+</div>
+                <div>
+                    <a onclick="return cancelFAddress();" id="ContentPlaceHolder1_Personal_LinkButton3" class="pull-right btn small form-ctrlBtn" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$Personal$LinkButton3','')">Cancel</a>
+                    <a id="ContentPlaceHolder1_Personal_LinkButton4" class="pull-right btn small form-ctrlBtn" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$Personal$LinkButton4','')">Save</a>
+
+                </div>
+                <br>
+                <br>
+                <div id="ContentPlaceHolder1_Personal_Div2" class="alert alert-info">
+
+                    <p>Please save this section before proceeding to the next.</p>
+
+                </div>
+                <hr class="alt">
+            </li>
+            <li>
+                <a onclick="return CorrectMsgFresher();" id="ContentPlaceHolder1_Personal_lnkUpload" class="pull-right btn small form-ctrlBtn" data-toggle="modal" data-target="#ContentPlaceHolder1_Personal_dvModalUpld" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$Personal$lnkUpload','')"><i class="icon-upload"></i>Upload</a>
+                <h4>
+                    <i class="icon-file"></i>Attachments</h4>
+                <div id="ContentPlaceHolder1_Personal_Div11" class="alert alert-info">
+
+                    <p>
+                        Please upload your updated resume.
+                    </p>
+
+                </div>
+                <div id="ContentPlaceHolder1_Personal_dvMessageUploadDetails" style="display:none;">
+                    <p>
+                        <span id="ContentPlaceHolder1_Personal_lblMessageUpload"></span>
+                    </p>
+                </div>
+
+</th></tr>
+            </table></th></tr>
+        <tr><th><table align="center">
+        <tr><th><br><h1 style="color: crimson"> Qualification </h1></th></tr>
+                    <table align="center">
+
+                        <tr><th><table align="center">
+                <tr><td align="center"><b>Qualification</b></td>
+                    <td align="center"><b>College/Institutes </b></td>
+                    <td align="center"><b>Board/ University </b></td>
+                    <td align="center"><b>Year </b></td>
+                    <td align="center"><b>Aggregate  </b></td>
+                </tr>
+
+            <tr>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+             <td><input type="text" name="" maxlength="30" /></td>
+            </tr>
+
+            <tr>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+             <td><input type="text" name="" maxlength="30" /></td>
+            </tr>
+
+            <tr>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+             <td><input type="text" name="" maxlength="30" /></td>
+            </tr>
+
+            <tr>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+            <td><input type="text" name="" maxlength="30" /></td>
+             <td><input type="text" name="" maxlength="30" /></td>
+            </tr>
+            </table></th></tr>
+
+
+</table>
+
+
+
+</table></th></tr>
+
+
+
+</table>
+</form>
+
+
+</body>
+</html>
+
